@@ -1,0 +1,16 @@
+[
+  { "id": "prod1", "nome": "Água", "preco": 2.00 },
+  { "id": "prod2", "nome": "Almoço Domingo", "preco": 20.00 },
+  { "id": "prod3", "nome": "Batata Frita", "preco": 10.00 },
+  { "id": "prod4", "nome": "Bolinho de Frango", "preco": 5.00 },
+  { "id": "prod5", "nome": "Churrasquinho", "preco": 6.00 },
+  { "id": "prod6", "nome": "Cookie", "preco": 7.00 },
+  { "id": "prod7", "nome": "Doces", "preco": 5.00 },
+  { "id": "prod8", "nome": "Donuts", "preco": 7.00 },
+  { "id": "prod9", "nome": "Marmita Sopa", "preco": 20.00 },
+  { "id": "prod10", "nome": "Pastel", "preco": 7.00 },
+  { "id": "prod11", "nome": "Refrigerante Lata", "preco": 5.00 },
+  { "id": "prod12", "nome": "Sopa Mandioca 400ml", "preco": 8.00 },
+  { "id": "prod13", "nome": "Cartela Bingo", "preco": 1.00 }
+  
+]

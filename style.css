@@ -1,0 +1,257 @@
+/* --- Importação de Fontes do Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* --- Estilos Gerais --- */
+body {
+    background-color: #f0f2f5; /* Um cinza bem claro para um fundo suave */
+    font-family: 'Open Sans', sans-serif; /* Fonte moderna e legível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: #343a40; /* Cor de texto padrão para o corpo, um cinza escuro suave */
+}
+
+.container {
+    max-width: 960px; /* Largura máxima em telas maiores */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Fundo branco para o container principal */
+    border-radius: 12px; /* Mais arredondado */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais proeminente e suave */
+    padding: 30px; /* Aumenta o padding interno */
+}
+
+/* --- Títulos --- */
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Uma fonte um pouco mais impactante para o título */
+    font-size: 2.5rem; /* Tamanho do título principal em telas maiores */
+    color: #007bff; /* Cor primária do Bootstrap */
+    text-align: center;
+    margin-bottom: 1.5rem; /* Espaçamento abaixo do título */
+    font-weight: 700; /* Negrito */
+}
+
+/* --- Rótulos (Labels) --- */
+.form-label {
+    font-size: 1.1rem; /* Tamanho da fonte para todos os rótulos em telas maiores */
+    font-weight: 600; /* Levemente mais negrito para se destacar */
+    margin-bottom: 0.5rem;
+    display: block; /* Garante que o rótulo ocupe a própria linha */
+    color: #495057; /* Um cinza escuro para os rótulos */
+}
+
+/* --- Campos de Entrada e Seleção (Inputs e Dropdowns) --- */
+.form-control-lg,
+.form-select-lg {
+    padding: 0.75rem 1rem; /* Padding generoso */
+    font-size: 1.1rem; /* Tamanho da fonte para o texto dentro dos campos em telas maiores */
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    height: calc(1.5em + 1.5rem + calc(var(--bs-border-width) * 2)); /* Garante altura consistente com inputs */
+    border: 1px solid #ced4da; /* Borda padrão */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transição suave */
+}
+
+.form-control-lg:focus,
+.form-select-lg:focus {
+    border-color: #80bdff; /* Borda azul ao focar */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Sombra suave ao focar */
+}
+
+/* --- Botões --- */
+.btn-lg {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.15rem; /* Tamanho da fonte do botão em telas maiores */
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    font-weight: 600; /* Negrito para os botões */
+}
+
+/* --- Separadores --- */
+hr {
+    border-top: 1px solid #dee2e6; /* Linha mais suave */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Tabela --- */
+.table {
+    font-size: 1.05rem; /* Tamanho da fonte padrão para a tabela em telas maiores */
+}
+
+#tabelaComanda th,
+#tabelaComanda td {
+    font-size: 1.05rem; /* Garante que cabeçalhos e células tenham o mesmo tamanho da tabela */
+    vertical-align: middle;
+    padding: 0.75rem; /* Padding consistente para células */
+}
+
+.table-dark {
+    background-color: #343a40 !important; /* Cor de fundo mais escura para o cabeçalho */
+    color: #ffffff; /* Texto branco no cabeçalho */
+}
+
+/* Estilo para a célula do Total Geral */
+#totalGeral {
+    color: #28a745; /* Cor verde para destaque */
+    font-size: 2.0rem !important; /* Tamanho ainda maior para o total em telas maiores */
+    font-weight: bold;
+    white-space: nowrap; /* Impede que o texto quebre para a próxima linha */
+}
+
+/* Estilo para a legenda da tabela */
+caption {
+    font-size: 1.1rem; /* Tamanho da fonte da legenda em telas maiores */
+    color: #6c757d;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Opcional: Efeito hover para linhas da tabela */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.08); /* Um azul claro mais sutil */
+    cursor: pointer;
+}
+
+/* Ajustes para o grupo de formulário para garantir alinhamento vertical */
+.row.g-3.align-items-end .col-md-3,
+.row.g-3.align-items-end .col-md-5,
+.row.g-3.align-items-end .col-md-2,
+.row.g-3.align-items-end .col-md-4, /* Adicionado para página de cadastro */
+.row.g-3.align-items-end .col-md-6 { /* Adicionado para página de cadastro */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o conteúdo (label e input) na parte inferior da coluna */
+    height: 100%; /* Garante que a coluna ocupe a altura total para o alinhamento */
+}
+
+/* Ajuste para o botão "Ir para Cadastro de Produtos" (o link) */
+.btn-info {
+    padding: 0.4rem 0.8rem; /* Padding menor que o padrão de botões pequenos */
+    font-size: 0.9rem; /* Fonte menor */
+    background-color: #17a2b8; /* Cor padrão do Bootstrap info */
+    border-color: #17a2b8;
+    color: #fff;
+    border-radius: 0.5rem;
+    /* Novas propriedades para separar o botão */
+    margin-top: 2rem; /* Afasta o botão da tabela acima */
+    margin-bottom: 1rem; /* Afasta o botão da parte inferior do container */
+}
+.btn-info:hover {
+    background-color: #138496; /* Cor mais escura no hover */
+    border-color: #117a8b;
+}
+
+
+/* --- Media Queries para Telas Menores (Celulares) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .form-control-lg,
+    .form-select-lg {
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .btn-lg {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Reduz ainda mais o botão de cadastro em telas pequenas */
+    .btn-info {
+        padding: 0.3rem 0.6rem; /* Padding ainda menor em telas pequenas */
+        font-size: 0.8rem; /* Fonte ainda menor em telas pequenas */
+        margin-top: 1.5rem; /* Mantém o espaçamento mas ajusta */
+        margin-bottom: 0.5rem;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    #tabelaComanda th,
+    #tabelaComanda td {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #totalGeral {
+        font-size: 1.5rem !important;
+    }
+
+    caption {
+        font-size: 1rem;
+    }
+
+    .row.g-3.align-items-end > div {
+        margin-bottom: 1rem;
+    }
+    .row.g-3.align-items-end > div:last-child {
+        margin-bottom: 0;
+    }
+
+    .row.g-3.align-items-end .col-md-2.d-grid {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Ajustes ainda menores para telas MUITO pequenas (celulares antigos, etc.) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .form-label {
+        font-size: 0.95rem;
+    }
+
+    .form-control-lg,
+    .form-select-lg,
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    /* Ajuste para o botão de cadastro em telas muito pequenas */
+    .btn-info {
+        font-size: 0.75rem; /* Fonte ainda menor */
+        padding: 0.25rem 0.5rem; /* Padding ainda menor */
+    }
+
+    #tabelaComanda th,
+    #tabelaComanda td {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+
+    #totalGeral {
+        font-size: 1.3rem !important;
+    }
+}
